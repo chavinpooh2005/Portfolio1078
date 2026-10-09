@@ -1,0 +1,181 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fcf8f2;
+    color: #333333;
+    padding: 20px 0;
+}
+
+/* ==========================================
+   Grid Container Layout (Desktop Default)
+   ========================================== */
+.grid-container {
+    width: 90%; /* กำหนด width เป็น percent ตามโจทย์ */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 28% 42% 26%; /* กำหนดความกว้างคอลัมน์เป็น percent */
+    gap: 2%;
+}
+
+/* Styling หน้าตาของแต่ละบล็อก */
+.grid-container > div {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* รูปภาพภายในบล็อก */
+img {
+    width: 100%; /* กำหนด width เป็น percent */
+    height: auto;
+    border-radius: 8px;
+    margin: 12px 0;
+    object-fit: cover;
+}
+
+/* Header & Fonts */
+h1 {
+    color: #c0392b;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #d35400;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #e67e22;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+ul, ol {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Grid Specific Items Setup */
+#header {
+    grid-column: 1 / -1; /* ให้ Header ขยายเต็มทุกคอลัมน์ */
+    text-align: center;
+    background-color: #fff3e0;
+}
+
+#header .hero-img {
+    max-height: 380px;
+    object-fit: cover;
+}
+
+#main1 {
+    /* ส่วน Ingredients */
+    background-color: #ffffff;
+}
+
+#main2 {
+    /* ส่วน Instructions */
+    background-color: #ffffff;
+}
+
+#right {
+    /* ส่วน Gallery */
+    background-color: #ffffff;
+}
+
+#footer {
+    grid-column: 1 / -1; /* ให้ Footer ขยายเต็มทุกคอลัมน์ */
+    text-align: center;
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 15px;
+}
+
+#footer a {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   Media Query 1: Tablet (<= 768px)
+   ========================================== */
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        width: 95%; /* กำหนด width เป็น percent */
+        grid-template-columns: 49% 49%;
+        gap: 2%;
+    }
+
+    #header {
+        grid-column: 1 / -1;
+    }
+
+    #main1 {
+        grid-column: 1 / 2;
+    }
+
+    #main2 {
+        grid-column: 2 / 3;
+    }
+
+    #right {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    #right h2 {
+        grid-column: 1 / -1;
+    }
+
+    #footer {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ==========================================
+   Media Query 2: Mobile (<= 480px)
+   ========================================== */
+@media only screen and (max-width: 480px) {
+    .grid-container {
+        width: 98%; /* กำหนด width เป็น percent */
+        grid-template-columns: 100%;
+        gap: 15px;
+    }
+
+    #header, #main1, #main2, #right, #footer {
+        grid-column: 1 / 2;
+    }
+
+    #right {
+        grid-template-columns: 100%;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}

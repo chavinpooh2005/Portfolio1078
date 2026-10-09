@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+}
+
+body {
+    background-color: #f7f4ef;
+    color: #2d2b2a;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ================= Navbar ================= */
+.navbar {
+    background-color: #3d3735;
+    color: #f7f4ef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 10%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #e6dfd5;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: #a8a29e;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #f7f4ef;
+    border-bottom: 2px solid #a38571;
+    padding-bottom: 4px;
+}
+
+/* ================= Layout ================= */
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2d2b2a;
+    font-weight: 600;
+}
+
+/* ================= Profile Card ================= */
+.profile-card {
+    background: #ffffff;
+    padding: 36px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(61, 55, 53, 0.04);
+    border: 1px solid #e6dfd5;
+    margin-bottom: 24px;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border: 3px solid #d6c7b8;
+}
+
+.profile-card h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #2d2b2a;
+}
+
+.subtitle {
+    color: #78716c;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social-links a {
+    color: #635347;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 6px 16px;
+    border: 1px solid #d6c7b8;
+    border-radius: 20px;
+    background-color: #faf7f2;
+    transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+    background-color: #635347;
+    color: #ffffff;
+    border-color: #635347;
+}
+
+/* ================= Cards ================= */
+.card {
+    background: #ffffff;
+    padding: 26px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(61, 55, 53, 0.04);
+    border: 1px solid #e6dfd5;
+}
+
+.card h2 {
+    color: #3d3735;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #ede7de;
+    padding-bottom: 8px;
+}
+
+.card ul {
+    padding-left: 20px;
+    color: #44403c;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+/* ================= Assignment Grid ================= */
+.assignment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.assignment-btn {
+    background-color: #faf7f2;
+    border: 1px solid #d6c7b8;
+    color: #44403c;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.assignment-btn:hover {
+    background-color: #8c6d58;
+    color: #ffffff;
+    border-color: #8c6d58;
+}
+
+/* ================= Projects ================= */
+.project-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.project-card {
+    border-left: 4px solid #8c6d58;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #f2ebe1;
+    color: #785a46;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 3px 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.back-btn {
+    display: inline-block;
+    background-color: #3d3735;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #2b2625;
+}
+
+/* ================= Footer ================= */
+footer {
+    text-align: center;
+    padding: 24px;
+    background-color: #3d3735;
+    color: #a8a29e;
+    font-size: 0.85rem;
+    margin-top: 40px;
+}
+
+/* ================= Project Gallery ================= */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #e6dfd5;
+    box-shadow: 0 4px 10px rgba(61, 55, 53, 0.05);
+    cursor: pointer; /* แสดงรูปไอคอนมือเมื่อเอาเมาส์ไปชี้ */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-gallery img:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(61, 55, 53, 0.1);
+}
+
+/* ================= Image Lightbox / Modal ================= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 43, 42, 0.88); /* โทนน้ำตาลเข้ม Earth Tone แบบโปร่งแสง */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 2px solid #e6dfd5;
+    animation: zoomIn 0.25s ease-in-out;
+}
+
+#caption {
+    margin-top: 14px;
+    color: #f7f4ef;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f7f4ef;
+    font-size: 38px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #d6c7b8;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

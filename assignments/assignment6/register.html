@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Register</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="register.js"></script>
+	</head>
+	<body>
+		<form name="myRegister" id="myRegister" action="login.html">
+			<fieldset>
+				<legend>Register</legend>
+				<span class="require-label">* require</span> <br>
+				<span id="errormsg"></span> <br>
+				
+				<div class="form-group">
+					<label>First name*:</label>
+					<input type="text" name="firstname" required>
+				</div>
+
+				<div class="form-group">
+					<label>Last name*:</label>
+					<input type="text" name="lastname" required>
+				</div>
+
+				<div class="form-group radio-group">
+					<label>Gender*:</label>
+					<input type="radio" name="gender" value="male">Male
+					<input type="radio" name="gender" value="female">Female
+					<input type="radio" name="gender" value="other">Other
+				</div>
+
+				<div class="form-group">
+					<label>Birthday*:</label>
+					<input type="date" name="bday" required>
+				</div>
+
+				<div class="form-group">
+					<label>Email address*:</label>
+					<input type="email" name="email" required>
+				</div>
+
+				<div class="form-group">
+					<label>Username*:</label>
+					<input type="text" name="username" required>
+				</div>
+
+				<div class="form-group">
+					<label>Password*:</label>
+					<input type="password" name="password" required>
+				</div>
+
+				<div class="form-group">
+					<label>Retype Password*:</label>
+					<input type="password" name="password" required>
+				</div>
+
+				<div class="btn-group">
+					<input type="submit" value="Register" id="registerBtn">
+					<input type="reset" value="Reset" id="resetBtn">
+				</div>
+			</fieldset>
+		</form>
+	</body>
+</html>

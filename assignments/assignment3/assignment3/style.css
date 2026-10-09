@@ -1,0 +1,110 @@
+/* 1. Basic Setup & Fonts */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f5f0;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 2. Header & Text Alignment */
+.header h1 {
+    text-align: center;
+    color: #7c3f00;
+    margin-bottom: 25px;
+}
+
+/* 3. Main Container (Box Model) */
+.recipe-container {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 2px solid #e0d5c1;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 4. Flexbox Layout */
+.flex-layout {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.content-column {
+    flex: 2;
+    min-width: 300px;
+}
+
+.image-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 220px;
+}
+
+/* 5. Image & Box Model Styling */
+.img-wrapper {
+    text-align: center;
+}
+
+.recipe-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border: 3px solid #7c3f00;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 6. Text & List Formatting */
+h2 {
+    color: #a0522d;
+    border-bottom: 2px solid #f0e6d2;
+    padding-bottom: 6px;
+    margin-top: 15px;
+}
+
+ul, ol {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* 7. Divider (<hr>) Styling */
+.divider {
+    border: none;
+    border-top: 2px dashed #d2b48c;
+    margin: 20px 0;
+}
+
+/* 8. Footer */
+.source-link {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.source-link a {
+    color: #7c3f00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.source-link a:hover {
+    text-decoration: underline;
+}

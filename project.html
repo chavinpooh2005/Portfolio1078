@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Chavin Kulsawade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MyPortfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home (Portfolio)</a></li>
+            <li><a href="project.html" class="active">Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">My Projects</h1>
+
+        <section class="project-grid">
+            <div class="card project-card">
+                <h2>Smart Room Project</h2>
+                <span class="tag">Smart Home / Unity 3D</span>
+                <p>โปรเจกต์จำลองและออกแบบห้องอัจฉริยะ (Smart Room) พัฒนาด้วย Unity และ C# Scripting สำหรับจำลองการทำงานอัตโนมัติของอุปกรณ์ภายในห้องและการสร้างแบบจำลองแบบ 3D Interactive</p>
+
+                <div class="project-gallery">
+                    <img src="Room1.png" alt="Smart Room View 1" onclick="openModal(this)">
+                    <img src="Room2.png" alt="Smart Room View 2" onclick="openModal(this)">
+                    <img src="Unity1.png" alt="Unity Development" onclick="openModal(this)">
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="index.html" class="back-btn">← กลับสู่หน้าหลัก Portfolio</a>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="imgFull" alt="Expanded View">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Chavin Kulsawade.</p>
+    </footer>
+
+    <script>
+        function openModal(element) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("imgFull");
+            var captionText = document.getElementById("caption");
+            
+            modal.style.display = "flex";
+            modalImg.src = element.src;
+            captionText.innerHTML = element.alt;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

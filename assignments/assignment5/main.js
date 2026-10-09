@@ -1,0 +1,53 @@
+window.onload = setupFunction;
+
+function setupFunction() {
+    
+    document.getElementById("top").innerText = "Welcome to the Forum";
+}
+
+
+let postCount = 0;
+
+function postFunction() {
+    
+    let messageText = document.getElementById("message").value;
+
+    
+    if (messageText.trim() === "") {
+        alert("กรุณากรอกข้อความก่อนกด Post ครับ");
+        return;
+    }
+
+    
+    if (postCount === 0) {
+        
+        document.getElementById("topic").innerText = messageText;
+        postCount++;
+    } else if (postCount === 1) {
+        
+        document.getElementById("reply1").innerText = messageText;
+        postCount++;
+    } else if (postCount === 2) {
+        
+        document.getElementById("reply2").innerText = messageText;
+        postCount++;
+    } else {
+        alert("โพสต์ครบ 3 ครั้งแล้ว กรุณากด Clear เพื่อเริ่มใหม่");
+    }
+
+    
+    document.getElementById("message").value = "";
+}
+
+function clearFunction() {
+    
+    document.getElementById("topic").innerText = "";
+    document.getElementById("reply1").innerText = "";
+    document.getElementById("reply2").innerText = "";
+
+    
+    document.getElementById("message").value = "";
+
+  
+    postCount = 0;
+}
